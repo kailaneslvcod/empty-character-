@@ -6,26 +6,15 @@ import { FirebaseConfig } from "../types";
 
 const CONFIG_KEY = "empty_character_firebase_config";
 
-// Default config from environment variables (if any)
 const getEnvConfig = (): FirebaseConfig | null => {
-  const apiKey = import.meta.env.VITE_FIREBASE_API_KEY;
-  const authDomain = import.meta.env.VITE_FIREBASE_AUTH_DOMAIN;
-  const projectId = import.meta.env.VITE_FIREBASE_PROJECT_ID;
-  const storageBucket = import.meta.env.VITE_FIREBASE_STORAGE_BUCKET;
-  const messagingSenderId = import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID;
-  const appId = import.meta.env.VITE_FIREBASE_APP_ID;
-
-  if (apiKey && projectId) {
-    return {
-      apiKey,
-      authDomain: authDomain || "",
-      projectId,
-      storageBucket: storageBucket || "",
-      messagingSenderId: messagingSenderId || "",
-      appId: appId || "",
-    };
-  }
-  return null;
+  return {
+    apiKey: "AIzaSyDWDF9qMjf58dWZPUh4qnxHkVS4Iky2EG4",
+    authDomain: "empty-character-9bbb3.firebaseapp.com",
+    projectId: "empty-character-9bbb3",
+    storageBucket: "empty-character-9bbb3.firebasestorage.app",
+    messagingSenderId: "99309797649",
+    appId: "1:99309797649:web:6fc90fb58ee5ac9ef94cb0"
+  };
 };
 
 // Retrieve config (either localStorage or env)
