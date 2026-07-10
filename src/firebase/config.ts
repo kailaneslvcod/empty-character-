@@ -6,6 +6,7 @@ import { FirebaseConfig } from "../types";
 
 const CONFIG_KEY = "empty_character_firebase_config";
 
+// Configuração fixa para evitar erros de busca de variáveis de ambiente
 const getEnvConfig = (): FirebaseConfig | null => {
   return {
     apiKey: "AIzaSyDWDF9qMjf58dWZPUh4qnxHkVS4Iky2EG4",
